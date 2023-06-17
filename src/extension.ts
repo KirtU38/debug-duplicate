@@ -10,7 +10,7 @@ export function activate(context: vscode.ExtensionContext) {
       let variableDeclaration = /.+=.+;.*/g;
       let methodDeclaration = /(public|private|protected).+\(.*/gi;
 
-      let duplicatedLine;
+      let duplicatedLine = "";
       if(selectedLine.match(debugWithVatiableInside)) {
         duplicatedLine = selectedLine.replace(/^System\.debug\((.+)\).*/gi, `System.debug('$1')`);
       } else if (selectedLine.match(variableDeclaration)) {
