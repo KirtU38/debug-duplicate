@@ -1,10 +1,10 @@
 {
-  "name": "debug-duplicate",
-  "displayName": "Debug duplicate",
+  "name": "duplicate-and-debug",
+  "displayName": "Duplicate & Debug",
   "icon": "debug-duplicate-icon.jpeg",
   "publisher": "EgorDevelopmentProjects",
   "description": "",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
 		"type": "git",
 		"url": "https://github.com/KirtU38/debug-duplicate.git"
@@ -20,7 +20,7 @@
   "contributes": {
     "commands": [
       {
-        "command": "debug-duplicate.duplicate",
+        "command": "duplicate-and-debug.duplicate",
         "title": "Debug Duplicate"
       }
     ]
