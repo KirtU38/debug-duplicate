@@ -1,10 +1,10 @@
 {
   "name": "duplicate-and-debug",
   "displayName": "Duplicate & Debug",
-  "icon": "debug-duplicate-icon.png",
+  "icon": "duplicate-and-debug-icon.png",
   "publisher": "EgorDevelopmentProjects",
   "description": "",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "repository": {
 		"type": "git",
 		"url": "https://github.com/KirtU38/debug-duplicate.git"
