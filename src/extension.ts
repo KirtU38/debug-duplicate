@@ -23,7 +23,7 @@ export function activate(context: vscode.ExtensionContext) {
     let duplicatedLine = "";
     if (selectedLine.match(debugWithVatiableInside)) {
       console.log('selectedLine.match(debugWithVatiableInside)');
-      duplicatedLine = selectedLine.replace(/^System\.debug\((.+)\).*/gi, `System.debug('$1')`);
+      duplicatedLine = selectedLine.replace(/^System\.debug\((.+)\).*/gi, `System.debug('$1');`);
     } else if (selectedLine.match(ifStatement)) {
       console.log('selectedLine.match(ifStatement)');
       let ifStatementWithoutCurlyBrace = selectedLine.replace('{', '').trim();
