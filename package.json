@@ -21,7 +21,7 @@
     "commands": [
       {
         "command": "duplicate-and-debug.duplicate",
-        "title": "Debug Duplicate"
+        "title": "Duplicate & Debug"
       }
     ]
   },
