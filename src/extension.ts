@@ -28,8 +28,8 @@ export function activate(context: vscode.ExtensionContext) {
       console.log('selectedLine.match(ifStatement)');
       let ifStatementWithoutCurlyBrace = selectedLine.replace('{', '').trim();
       spacesToInsertBeforeTheDuplicatedLine += ' '.repeat(4);
-      ifStatementWithoutCurlyBrace = ifStatementWithoutCurlyBrace.replaceAll('\'', '');
-      ifStatementWithoutCurlyBrace = ifStatementWithoutCurlyBrace.replaceAll('||', 'OR');
+      ifStatementWithoutCurlyBrace = ifStatementWithoutCurlyBrace.replace(/\'/g, '');
+      ifStatementWithoutCurlyBrace = ifStatementWithoutCurlyBrace.replace(/\|\|/g, 'OR');
       duplicatedLine = `System.debug('--> ${ifStatementWithoutCurlyBrace}');`;
     } else if (selectedLine.match(methodDeclaration)) {
       console.log('selectedLine.match(methodDeclaration)');
@@ -56,7 +56,7 @@ export function activate(context: vscode.ExtensionContext) {
       duplicatedLine = `System.debug('Pointer: ${counter++}');`;
     } else {
       console.log('STANDARD');
-      selectedLine = selectedLine.replaceAll('\'', '');
+      selectedLine = selectedLine.replace(/\'/g, '');
       duplicatedLine = `System.debug('${selectedLine}');`;
     }
 
